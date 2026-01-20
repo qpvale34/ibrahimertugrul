@@ -24,7 +24,7 @@ export default function ExperienceItem({ item, translations, isVisible, index, l
         }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <div className="nm-flat transition-all duration-300 overflow-hidden">
+      <div className="nm-flat transition-all duration-300 overflow-visible">
         <div className="p-5 sm:p-6">
           <ExperienceHeader
             item={item}

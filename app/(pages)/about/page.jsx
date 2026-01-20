@@ -43,7 +43,7 @@ export default function AboutPage() {
   return (
     <section id="about" className="relative mt-5 sm:mt-10 md:mt-20 min-h-screen">
       <div className="block sm:hidden h-1" />
-      <div className="min-h-screen relative overflow-hidden text-primary">
+      <div className="min-h-screen relative overflow-visible text-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative z-10">
           <div className="max-w-none mx-auto space-y-8">
             <div className="grid md:grid-cols-2 gap-6">
