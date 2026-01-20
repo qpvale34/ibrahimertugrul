@@ -8,7 +8,7 @@ import ScrollToTop from "../components/extra/ScrollToTop";
 
 export const metadata = {
     title: "İbrahim Ertuğrul ",
-    description: "İngilizce - Modern web teknolojileri - Geliştirme kartları.",
+    description: "Modern web teknolojileri - Geliştirme kartları.",
     icons: {
         icon: [
             { url: '/favicon.ico', sizes: 'any' },
