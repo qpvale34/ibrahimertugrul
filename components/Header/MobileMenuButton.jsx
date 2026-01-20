@@ -1,12 +1,12 @@
 export function MobileMenuButton({ isMenuOpen, toggleMenu, t }) {
  return (
-  <button
-   onClick={toggleMenu}
-   type="button"
-   className="lg:hidden inline-flex items-center justify-center p-1.5 text-primary rounded-lg hover:bg-[#718355]/10 focus:outline-none focus:ring-2 focus:ring-[#b5c99a]/50 transition-all duration-300"
-   aria-controls="mobile-menu"
-   aria-expanded={isMenuOpen}
-  >
+   <button
+    onClick={toggleMenu}
+    type="button"
+    className="lg:hidden inline-flex items-center justify-center p-1.5 text-primary rounded-lg nm-button nm-flat-sm focus:outline-none transition-all duration-300 hover:scale-105"
+    aria-controls="mobile-menu"
+    aria-expanded={isMenuOpen}
+   >
    <span className="sr-only">{t.openMenu}</span>
    <div className="relative w-5 h-5">
     <span

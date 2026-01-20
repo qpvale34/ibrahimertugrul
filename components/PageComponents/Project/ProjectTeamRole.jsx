@@ -8,7 +8,7 @@ export default function ProjectTeamRole({ project, buttonTexts }) {
    {project.team && (
     <div>
      <h4 className="font-semibold mb-2 flex items-center text-sm xs:text-base">
-      <FaUsers className="w-3 xs:w-4 h-3 xs:h-4 mr-2 text-purple-400" />
+      <FaUsers className="w-3 xs:w-4 h-3 xs:h-4 mr-2 text-[var(--text-tertiary)]" />
       {buttonTexts.team}
      </h4>
      <span className="text-sm xs:text-base">{project.team}</span>

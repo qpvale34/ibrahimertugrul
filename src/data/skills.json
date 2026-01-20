@@ -1,0 +1,83 @@
+[
+    {
+        "categories": [
+            "backend",
+            "python"
+        ],
+        "name": "Python",
+        "experience": 4,
+        "icon": "FaPython",
+        "color": "text-blue-500",
+        "displayOrder": 1
+    },
+    {
+        "categories": [
+            "web teknolojileri"
+        ],
+        "name": "Next.js",
+        "experience": 4,
+        "icon": "SiNextdotjs",
+        "color": "text-black",
+        "displayOrder": 2
+    },
+    {
+        "categories": [
+            "web teknolojileri"
+        ],
+        "name": "React",
+        "experience": 4,
+        "icon": "FaReact",
+        "color": "text-cyan-400",
+        "displayOrder": 3
+    },
+    {
+        "categories": [
+            "web teknolojileri"
+        ],
+        "name": "TypeScript",
+        "experience": 3,
+        "icon": "SiTypescript",
+        "color": "text-blue-600",
+        "displayOrder": 4
+    },
+    {
+        "categories": [
+            "gömülü sistemler"
+        ],
+        "name": "C++",
+        "experience": 3,
+        "icon": "SiCplusplus",
+        "color": "text-blue-700",
+        "displayOrder": 5
+    },
+    {
+        "categories": [
+            "gömülü sistemler"
+        ],
+        "name": "Arduino / ESP32",
+        "experience": 3,
+        "icon": "SiArduino",
+        "color": "text-teal-500",
+        "displayOrder": 6
+    },
+    {
+        "categories": [
+            "gömülü sistemler"
+        ],
+        "name": "STM32",
+        "experience": 2,
+        "icon": "FaMicrochip",
+        "color": "text-blue-400",
+        "displayOrder": 7
+    },
+    {
+        "categories": [
+            "web teknolojileri"
+        ],
+        "name": "Tailwind",
+        "experience": 4,
+        "icon": "SiTailwindcss",
+        "color": "text-cyan-500",
+        "displayOrder": 8
+    }
+]

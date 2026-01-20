@@ -1,0 +1,60 @@
+[
+    {
+        "id": "1",
+        "category": "Teknofest - Tübitak",
+        "titleTr": "Danışmanlık ve Mentörlük",
+        "titleEn": "Consultancy and Mentorship",
+        "institutionTr": "Teknofest & Tübitak Yarışmaları",
+        "institutionEn": "Teknofest & Tübitak Competitions",
+        "period": "Devam",
+        "status": "current",
+        "location": "Türkiye",
+        "gpa": null,
+        "descriptionTr": "Teknofest ve Tübitak bünyesindeki teknoloji yarışmalarında takımlara teknik danışmanlık ve mentörlük desteği",
+        "descriptionEn": "Technical consultancy and mentorship to teams in Teknofest and Tübitak technology competitions.",
+        "technologies": [
+            "FaProjectDiagram",
+            "FaChalkboardTeacher",
+            "FaRobot"
+        ],
+        "achievementsTr": [
+            "Takım koordinasyonu",
+            "Teknik raporlama desteği"
+        ],
+        "achievementsEn": [
+            "Team coordination",
+            "Technical reporting support"
+        ],
+        "icon": "FaUsers",
+        "displayOrder": 1
+    },
+    {
+        "id": "2",
+        "category": "Gömülü Sistemler",
+        "titleTr": "Danışmanlık ve Mentörlük",
+        "titleEn": "Consultancy and Mentorship",
+        "institutionTr": "Gömülü Sistemler Projeleri",
+        "institutionEn": "Embedded Systems Projects",
+        "period": "Devam",
+        "status": "current",
+        "location": "Türkiye",
+        "gpa": null,
+        "descriptionTr": "Mikrokontrolcü tabanlı projeler ve gömülü sistem mimarileri üzerine danışmanlık.",
+        "descriptionEn": "Technical consultancy on microcontroller-based projects and embedded system architectures.",
+        "technologies": [
+            "SiCplusplus",
+            "SiArduino",
+            "FaMicrochip"
+        ],
+        "achievementsTr": [
+            "Donanım-yazılım entegrasyonu",
+            "Prototipleme"
+        ],
+        "achievementsEn": [
+            "Hardware-software integration",
+            "Prototyping"
+        ],
+        "icon": "FaMicrochip",
+        "displayOrder": 2
+    }
+]

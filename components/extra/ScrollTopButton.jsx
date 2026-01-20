@@ -2,20 +2,20 @@
 import { FaArrowUp } from "react-icons/fa";
 
 export default function ScrollToTopButton({ title = "Başa Dön" }) {
- const scrollToTop = () => {
-  window.scrollTo({
-   top: 0,
-   behavior: "smooth",
-  });
- };
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
 
- return (
-  <button
-   onClick={scrollToTop}
-   className="hidden lg:block fixed bottom-5 right-5 z-50 p-3 bg-linear-to-r from-[#020617] to-[#00ffbf] text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 group cursor-pointer"
-   title={title}
-  >
-   <FaArrowUp className="w-5 h-5 group-hover:animate-bounce" />
-  </button>
- );
+    return (
+        <button
+            onClick={scrollToTop}
+            className="fixed bottom-5 right-5 z-50 p-4 nm-button nm-flat text-[var(--bg-accent)] transition-all duration-300 group cursor-pointer"
+            title={title}
+        >
+            <FaArrowUp className="w-5 h-5 group-hover:animate-bounce" />
+        </button>
+    );
 }

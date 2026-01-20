@@ -111,7 +111,7 @@ export default function ProjectCard({ project, translations, language, index }) 
 
  return (
   <div
-   className="bg-secondary rounded-2xl shadow-2xl sm:rounded-4xl sm:shadow-4xl transition-all duration-300 overflow-hidden"
+   className="nm-flat transition-all duration-300 overflow-hidden"
    style={{
     animation: `slideIn 0.6s ease-out ${index * 200}ms both`,
    }}

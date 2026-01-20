@@ -1,29 +1,24 @@
 export default function Title({ title, subtitle, description, isVisible }) {
- return (
-  <div
-   className={`text-center mb-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-    }`}
-  >
-   <div className="inline-flex items-center space-x-3 mb-2">
-    <div className="w-12 h-0.5 bg-linear-to-r from-transparent to-green-300"></div>
-    <span className="text-[16px] sm:text-base font-medium bg-linear-to-r from-green-100 to-green-300 bg-clip-text text-transparent">
-     {subtitle}
-    </span>
-    <div className="w-12 h-0.5 bg-linear-to-r from-transparent to-green-300"></div>
-   </div>
+  return (
+    <div className={`mb-4 sm:mb-12 transition-all duration-500 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div className="flex items-center justify-center space-x-2 sm:space-x-4 mb-2 sm:mb-4">
+        <div className="h-[2px] w-8 sm:w-16 bg-[var(--bg-accent)] rounded-full opacity-50" />
+        <span className="text-[var(--bg-accent)] font-semibold tracking-[0.2em] text-[10px] sm:text-xs uppercase">
+          {subtitle}
+        </span>
+        <div className="h-[2px] w-8 sm:w-16 bg-[var(--bg-accent)] rounded-full opacity-50" />
+      </div>
 
-   <h1 className="mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-linear-to-r bg-clip-text text-green-300 font-extrabold">
-    {title}
-   </h1>
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary tracking-tight mb-2 sm:mb-6">
+        {title}
+      </h1>
 
-   {description && (
-    <div
-     className={`mt-6 transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
-    >
-     <p className="text-[16px] sm:text-lg max-w-3xl mx-auto px-2 text-accent">{description}</p>
+      {description && (
+        <p className="max-w-2xl mx-auto text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed px-4">
+          {description}
+        </p>
+      )}
     </div>
-   )}
-  </div>
- );
+  );
 }
+

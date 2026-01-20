@@ -1,0 +1,59 @@
+[
+    {
+        "id": "1",
+        "category": "Web",
+        "titleTr": "Portfolyo Projesi",
+        "titleEn": "Portfolio Project",
+        "descriptionTr": "Next.js ve Tailwind kullanılarak geliştirilmiş modern portfolyo.",
+        "descriptionEn": "Modern portfolio developed using Next.js and Tailwind.",
+        "status": "completed",
+        "technologies": [
+            "SiNextdotjs",
+            "FaReact",
+            "SiTailwindcss"
+        ],
+        "featuresTr": [
+            "Neumorphic tasarım",
+            "Çoklu dil"
+        ],
+        "featuresEn": [
+            "Neumorphic design",
+            "Multi-language"
+        ],
+        "liveUrl": "https://github.com/qpvale34",
+        "githubUrl": "https://github.com/qpvale34",
+        "teamTr": "Bireysel",
+        "teamEn": "Individual",
+        "roleTr": "Geliştirici",
+        "roleEn": "Developer",
+        "displayOrder": 1
+    },
+    {
+        "id": "2",
+        "category": "Gömülü Sistemler",
+        "titleTr": "Danışmanlık - Mentörlük",
+        "titleEn": "Consultancy - Mentorship",
+        "descriptionTr": "Gömülü sistemler ve robotik projeler için mentörlük süreçleri.",
+        "descriptionEn": "Mentorship processes for embedded systems and robotics projects.",
+        "status": "completed",
+        "technologies": [
+            "SiCplusplus",
+            "SiArduino",
+            "FaMicrochip"
+        ],
+        "featuresTr": [
+            "Teknik destek",
+            "Proje yönetimi"
+        ],
+        "featuresEn": [
+            "Technical support",
+            "Project management"
+        ],
+        "githubUrl": "https://github.com/qpvale34",
+        "teamTr": "Ekip",
+        "teamEn": "Team",
+        "roleTr": "Mentör",
+        "roleEn": "Mentor",
+        "displayOrder": 2
+    }
+]

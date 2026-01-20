@@ -115,9 +115,9 @@ export const iconMap = {
 };
 
 export const categoryColorMap = {
-  education: "bg-green-700",
-  internship: "bg-green-700",
-  certificates: "bg-green-700",
+  education: "nm-inset text-[var(--bg-accent)] font-bold",
+  internship: "nm-inset text-[var(--bg-accent)] font-bold",
+  certificates: "nm-inset text-[var(--bg-accent)] font-bold",
 };
 
 export const iconColorMap = {
@@ -173,3 +173,4 @@ export const getStatusBg = (status) => {
       return "bg-gray-500/20 border-accent";
   }
 };
+

@@ -1,0 +1,26 @@
+[
+    {
+        "keyPath": "home.shortDescription",
+        "category": null,
+        "translations": {
+            "TR": "Vibe Coding - Python - Gömülü Sistemler - Modern Web Teknolojileri.",
+            "EN": "Vibe Coding - Python - Embedded Systems - Modern Web Technologies."
+        }
+    },
+    {
+        "keyPath": "about.journeyDescription",
+        "category": null,
+        "translations": {
+            "TR": "Gazi Üniversitesi Gazi Eğitim Fakültesi - Python - C++, C# - (React, Next.js) - (Django, Flask) - (MySQL, MongoDB) - (Tailwind, Bootstrap) - 'Vibe Coding' .",
+            "EN": "Gazi University Faculty of Education - Python - C++, C# - (React, Next.js) - (Django, Flask) - (MySQL, MongoDB) - (Tailwind, Bootstrap) - 'Vibe Coding' ."
+        }
+    },
+    {
+        "keyPath": "about.interestsDescription",
+        "category": null,
+        "translations": {
+            "TR": "Yazılım geliştirme - İngilizce - Eğitim.",
+            "EN": "Software development - English - Education."
+        }
+    }
+]

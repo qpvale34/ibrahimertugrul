@@ -1,11 +1,9 @@
 .rotating-border {
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg,
-    transparent 270deg,
-    #66bb6a 270deg,
-    #1a5745 360deg
-  );
+  background: conic-gradient(from 0deg,
+      transparent 0deg,
+      transparent 270deg,
+      var(--text-tertiary) 270deg,
+      var(--bg-accent) 360deg);
   animation: rotate-border 5s linear infinite;
 }
 
@@ -25,16 +23,19 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-20px);
   }
@@ -45,6 +46,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -56,6 +58,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

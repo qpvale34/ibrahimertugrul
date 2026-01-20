@@ -1,7 +1,8 @@
+"use client";
 import Link from "next/link";
 import ReactCountryFlag from "react-country-flag";
 import { FaSun, FaMoon } from "react-icons/fa";
-import { useState, useEffect } from "react";
+import { useTheme } from "../../app/context/ThemeContext";
 
 export function MobileNav({
  isMenuOpen,
@@ -14,28 +15,14 @@ export function MobileNav({
  socialLinks,
  t,
 }) {
- const [isLight, setIsLight] = useState(false);
-
- useEffect(() => {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-   setIsLight(savedTheme === 'light');
-  }
- }, []);
-
- const toggleTheme = () => {
-  const newTheme = !isLight;
-  setIsLight(newTheme);
-  localStorage.setItem('theme', newTheme ? 'light' : 'dark');
-  document.documentElement.classList.toggle('light', newTheme);
- };
+  const { isLight, toggleTheme } = useTheme();
 
  return (
   <div
    className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${isMenuOpen ? "max-h-[700px] opacity-100 mt-6" : "max-h-0 opacity-0"
     }`}
   >
-   <div className="bg-[#143d32]/95 backdrop-blur-sm rounded-xl p-4 space-y-1 md:space-y-2 border border-[#2e7d32]/30">
+   <div className="nm-flat rounded-xl p-4 space-y-1 md:space-y-2">
     {navigationItems.map((item, index) => {
      const IconComponent = item.icon;
      const isActive = activeSection === item.key;
@@ -45,39 +32,40 @@ export function MobileNav({
        key={item.key}
        href={item.href}
        onClick={handleNavigationClick}
-       className={`flex items-center space-x-4 sm:space-x-5 py-2 md:py-3 px-3 rounded-lg text-[15px] md:text-[18px] font-medium transition-all duration-300 ${isActive
-        ? "text-[#c8e6c9] bg-info border-l-4 border-[# 66bb6a]"
-        : "text-[#c8e6c9] hover:bg-[#1a5745]/10"
-        }`}
+className={`flex items-center space-x-4 sm:space-x-5 py-2 md:py-3 px-3 rounded-lg text-[15px] md:text-[18px] font-medium transition-all duration-300 ${isActive
+         ? "text-[var(--text-tertiary)] nm-inset"
+         : "text-primary nm-flat hover:text-[var(--text-tertiary)] hover:scale-105"
+         }`}
        style={{ animationDelay: `${index * 50}ms` }}
       >
-       <IconComponent className="w-4 h-4 sm:h-5 sm:w-5" />
-       <span>{item.name}</span>
+<IconComponent className="w-4 h-4 sm:h-5 sm:w-5 group-hover:scale-110 transition-transform duration-200" />
+                        <span>{item.name}</span>
       </Link>
      );
     })}
 
-    <div className="py-3 my-0 border-t border-[#2e7d32]/30">
-     <div className="flex justify-center space-x-3">
-      <button
-       onClick={toggleTheme}
-       className="flex items-center justify-center px-3 py-2 rounded-lg bg-gradient-to-r from-[#143d32] to-[#1a5745] hover:from-[#2e7d32] hover:to-[#388e3c] transition-all duration-300 group"
-      >
-       {isLight ? (
-        <FaMoon className="w-5 h-5 text-blue-400" />
-       ) : (
-        <FaSun className="w-5 h-5 text-yellow-400" />
-       )}
-      </button>
+     <div className="py-3 my-0 border-t border-[var(--bg-accent)]/30">
+      <div className="flex justify-center space-x-3">
+       <button
+        onClick={toggleTheme}
+        className="flex items-center justify-center px-3 py-2 rounded-lg nm-button nm-flat text-[var(--bg-accent)] transition-all duration-300 group hover:scale-105"
+        aria-label={isLight ? "Switch to dark mode" : "Switch to light mode"}
+       >
+        {isLight ? (
+         <FaMoon className="w-5 h-5 text-[var(--bg-accent)]" />
+        ) : (
+         <FaSun className="w-5 h-5 text-[var(--bg-accent)]" />
+        )}
+       </button>
 
       {languagesConfig.map((lang) => (
        <button
         key={lang.code}
         onClick={() => handleLanguageChange(lang.code)}
-        className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ${language === lang.code
-         ? "text-[#c8e6c9] dark:text-[#c8e6c9] light:text-white bg-[#1b5e20] dark:bg-[#1b5e20] light:bg-[#2e7d32] border border-[#66bb6a] dark:border-[#66bb6a] light:border-[#43a047]"
-         : "text-[#c8e6c9] dark:text-[#c8e6c9] light:text-[#1b5e20] hover:bg-[#1a5745]/10 dark:hover:bg-[#1a5745]/10 light:hover:bg-[#c8e6c9]"
-         }`}
+className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ${language === lang.code
+          ? "text-[var(--text-primary)] nm-inset text-[var(--bg-accent)] font-bold"
+          : "nm-flat text-primary hover:text-[var(--bg-accent)] hover:scale-105"
+          }`}
        >
         <div className="flex items-center">
          <ReactCountryFlag
@@ -92,7 +80,7 @@ export function MobileNav({
      </div>
     </div>
 
-    <div className="grid grid-cols-2 gap-2 pt-3 border-t border-[#66bb6a]/30 dark:border-[#66bb6a]/30 light:border-[#2e7d32]">
+    <div className="grid grid-cols-2 gap-2 pt-3 border-t border-[var(--bg-accent)]/30">
      {socialLinks.map((link) => {
       const IconComponent = link.icon;
       return (
@@ -101,11 +89,11 @@ export function MobileNav({
         href={link.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center space-x-1.5 px-3 py-2.5 text-primary bg-gradient-to-r from-[#143d32] to-[#1a5745] dark:from-[#143d32] dark:to-[#1a5745] light:from-[#1b5e20] light:to-[#2e7d32] hover:from-[#2e7d32] hover:to-[#388e3c] rounded-lg text-xs font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+        className="flex items-center justify-center space-x-1.5 px-3 py-2.5 text-primary nm-button nm-flat text-primary hover:text-[var(--bg-accent)] hover:scale-105"
        >
-        <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 text-[#c8e6c9] dark:text-[#c8e6c9] light:text-white" />
+        <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--text-primary)]" />
         {link.name === t.cv && (
-         <span className="truncate text-[#c8e6c9] dark:text-[#c8e6c9] light:text-white font-semibold">{link.name}</span>
+         <span className="truncate text-[var(--text-primary)] font-semibold">{link.name}</span>
         )}
        </Link>
       );
@@ -115,3 +103,5 @@ export function MobileNav({
   </div>
  );
 }
+
+

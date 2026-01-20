@@ -14,13 +14,13 @@ export default function CategoryButton({
  return (
   <button
    onClick={() => onClick(categoryKey)}
-   className={`group relative px-3 xs:px-4 sm:px-6 py-2 xs:py-3 sm:py-4 rounded-lg xs:rounded-xl transition-all duration-300 ${isActive
-    ? `bg-linear-to-r ${color} text-accent shadow-lg scale-105`
-    : "bg-secondary hover:bg-info text-primary"
-    } ${className}`}
+className={`nm-button group relative px-3 xs:px-4 sm:px-6 py-2 xs:py-3 sm:py-4  transition-all duration-300 ${isActive
+     ? `nm-inset text-[var(--text-tertiary)] scale-105`
+     : "nm-flat text-primary hover:scale-105"
+     } ${className}`}
   >
    <div className="flex items-center space-x-2 xs:space-x-3">
-    {Icon && <Icon className="w-3 xs:w-4 sm:w-5 h-3 xs:h-4 sm:h-5" />}
+    {Icon && <Icon className="w-3 xs:w-4 sm:w-5 h-3 xs:h-4 sm:h-5 group-hover:scale-110 transition-transform duration-200" />}
     <div className="text-left">
      <div className="font-semibold text-sm sm:text-base lg:text-lg">
       {title}
@@ -31,7 +31,7 @@ export default function CategoryButton({
     </div>
    </div>
    {isActive && (
-    <div className="absolute -bottom-1 xs:-bottom-2 left-1/2 transform -translate-x-1/2 w-6 xs:w-8 h-0.5 xs:h-1 bg-green-400 rounded-full"></div>
+    <div className="absolute -bottom-1 xs:-bottom-2 left-1/2 transform -translate-x-1/2 w-6 xs:w-8 h-0.5 xs:h-1 var(--text-tertiary) rounded-full"></div>
    )}
   </button>
  );

@@ -1,19 +1,17 @@
-import AnimatedGradient from "../extra/AnimatedGradient";
+"use client";
+import { useLanguage } from "../../app/context/LanguageContext";
 
 export default function LoadingScreen({ language }) {
+  const { t } = useLanguage();
 
- return (
-  <section className="min-h-screen w-full flex flex-col items-center justify-center bg-linear-to-br from-[#0a1f1a] via-[#0d2821] to-[#143d32] relative overflow-hidden">
-   <div className="relative z-10 flex flex-col items-center">
-    <div className="mb-8 scale-150 animate-spin-slow">
-     <AnimatedGradient isHovered={true} />
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-500 mx-auto mb-4"></div>
+        <p className="text-primary">
+          {language === "EN" ? "Loading..." : "Yükleniyor..."}
+        </p>
+      </div>
     </div>
-   </div>
-   <style jsx>{`
-    .animate-spin-slow {
-     animation: spin 3s linear infinite;
-    }
-   `}</style>
-  </section>
- );
+  );
 }

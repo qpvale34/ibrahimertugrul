@@ -1,82 +1,81 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import ReactCountryFlag from "react-country-flag";
+import { FaChevronUp } from "react-icons/fa";
 
-export default function LanguageSelector({ language, onLanguageChange, languagesConfig }) {
- const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
+export default function LanguageSelector({ currentLang, onLanguageChange, languages }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
- const handleLanguageChange = (lang) => {
-  setIsLanguageDropdownOpen(false);
-  if (onLanguageChange) {
-   onLanguageChange(lang);
-  }
- };
-
- return (
-  <div className="relative">
-   <button
-    onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
-    className="flex items-center space-x-2 px-3 py-2 text-[#a5d6a7] hover:text-[#81c784] hover:bg-[#2e7d32]/10 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#66bb6a]/50 border border-[#66bb6a]/30 text-sm cursor-pointer hover:cursor-pointer"
-   >
-    <div className="flex items-center">
-     <ReactCountryFlag
-      countryCode={
-       languagesConfig.find((lang) => lang.code === language)?.countryCode || "TR"
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
       }
-      svg
-      style={{
-       width: "20px",
-       height: "16px",
-      }}
-      title={
-       languagesConfig.find((lang) => lang.code === language)?.name || "Turkey"
-      }
-     />
-    </div>
-    <span className="font-medium">{language}</span>
-    <svg
-     className={`w-3 h-3 transition-transform duration-300 ${isLanguageDropdownOpen ? "rotate-180" : ""
-      }`}
-     fill="none"
-     stroke="currentColor"
-     viewBox="0 0 24 24"
-    >
-     <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M19 9l-7 7-7-7"
-     />
-    </svg>
-   </button>
+    };
 
-   {isLanguageDropdownOpen && (
-    <div className="absolute bottom-full left-0 mb-2 py-2 w-32 bg-[#143d32] rounded-lg shadow-xl border border-[#66bb6a]/30 z-50">
-     {languagesConfig.map((lang) => (
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownRef]);
+
+  // Ensure languages is an array
+  const languagesList = Array.isArray(languages) ? languages : [];
+
+  return (
+    <div className="relative" ref={dropdownRef}>
       <button
-       key={lang.code}
-       onClick={() => handleLanguageChange(lang.code)}
-       className={`flex items-center space-x-2 w-full px-3 py-2 text-sm transition-all duration-300 cursor-pointer hover:cursor-pointer ${language === lang.code
-        ? "text-secondary bg-[#2e7d32]/20"
-        : "text-secondary hover:text-[#81c784] hover:bg-[#2e7d32]/10"
-        }`}
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center space-x-2 px-3 py-2 text-[var(--text-primary)] hover:bg-[var(--bg-info)]/20 rounded-lg nm-button nm-flat transition-all duration-300 focus:outline-none border border-[var(--bg-accent)]/30 text-sm cursor-pointer hover:cursor-pointer"
       >
-       <div className="flex items-center">
-        <ReactCountryFlag
-         countryCode={lang.countryCode}
-         svg
-         style={{
-          width: "20px",
-          height: "16px",
-         }}
-         title={lang.name}
-        />
-       </div>
-       <span>{lang.name}</span>
+        <div className="flex items-center space-x-2">
+          <ReactCountryFlag
+            countryCode={currentLang === 'TR' ? 'TR' : 'GB'}
+            svg
+            style={{
+              width: '1em',
+              height: '1em',
+            }}
+            title={currentLang === 'TR' ? 'Türkçe' : 'English'}
+          />
+          <span className="font-medium">{currentLang === 'TR' ? 'TR' : 'EN'}</span>
+        </div>
+        <FaChevronUp className={`w-3 h-3 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
-     ))}
+
+      {isOpen && (
+        <div className="absolute bottom-full left-0 mb-2 py-2 w-32 bg-[var(--bg-secondary)] nm-flat rounded-lg shadow-xl border border-[var(--bg-accent)]/30 z-50">
+          {languagesList.map((lang) => (
+            <button
+              key={lang.code}
+              type="button"
+              onClick={() => {
+                onLanguageChange(lang.code);
+                setIsOpen(false);
+              }}
+              className={`w-full flex items-center space-x-3 px-4 py-2 text-sm transition-all duration-300 text-left cursor-pointer hover:cursor-pointer ${currentLang === lang.code
+                ? "text-[var(--bg-accent)] bg-[var(--bg-info)]/20"
+                : "text-[var(--text-secondary)] hover:text-[var(--bg-accent)] hover:bg-[var(--bg-info)]/10"
+                }`}
+            >
+              <div className="flex items-center">
+                <ReactCountryFlag
+                  countryCode={lang.countryCode || (lang.code === 'TR' ? 'TR' : 'GB')}
+                  svg
+                  style={{
+                    width: "20px",
+                    height: "16px",
+                  }}
+                  title={lang.name}
+                />
+              </div>
+              <span>{lang.name}</span>
+            </button>
+          ))}
+        </div>
+      )}
     </div>
-   )}
-  </div>
- );
+  );
 }
