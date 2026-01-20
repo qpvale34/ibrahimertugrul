@@ -19,8 +19,8 @@
         "keyPath": "about.interestsDescription",
         "category": null,
         "translations": {
-            "TR": "Yazılım geliştirme - İngilizce - Eğitim.",
-            "EN": "Software development - English - Education."
+            "TR": "Yazılım Geliştirme - Gömülü Sistemler - Eğitim.",
+            "EN": "Software Development - Embedded Systems - Education."
         }
     }
 ]

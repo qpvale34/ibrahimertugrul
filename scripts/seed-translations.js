@@ -27,8 +27,8 @@ const translationsData = [
     keyPath: "about.interestsDescription",
     category: null,
     translations: {
-      TR: "",
-      EN: "",
+      TR: "Yazılım Geliştirme - Gömülü Sistemler - Eğitim.",
+      EN: "Software Development - Embedded Systems - Education.",
     },
   },
 ];
