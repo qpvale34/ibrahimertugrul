@@ -19,7 +19,7 @@ export function MobileNav({
 
   return (
     <div
-      className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out px-4 pb-4 ${isMenuOpen ? "max-h-[800px] opacity-100 mt-6" : "max-h-0 opacity-0"
+      className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out p-4 ${isMenuOpen ? "max-h-[850px] opacity-100 mt-6" : "max-h-0 opacity-0"
         }`}
     >
       <div className="nm-flat rounded-xl p-4 space-y-1 md:space-y-2">
