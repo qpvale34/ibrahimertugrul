@@ -125,5 +125,42 @@
         "roleTr": "Mentör",
         "roleEn": "Mentor",
         "displayOrder": 2
+    },
+    {
+        "id": "5",
+        "category": "Gömülü Sistemler",
+        "titleTr": "Göçük İzleme ve Acil Durum Bildirim Servisi",
+        "titleEn": "Collapse Detection and Emergency Alert Service",
+        "descriptionTr": "Deprem ve göçük algılama sistemi. HX711 yük sensörü ile ağırlık takibi yapar, eşik değer aşıldığında WhatsApp üzerinden acil durum bildirimi gönderir.",
+        "descriptionEn": "Earthquake and collapse detection system. Monitors weight with HX711 load sensor and sends WhatsApp emergency alerts when threshold is exceeded.",
+        "status": "completed",
+        "technologies": [
+            "SiCplusplus",
+            "SiArduino",
+            "FaMicrochip",
+            "SiWifi"
+        ],
+        "featuresTr": [
+            "HX711 Yük Sensörü",
+            "GPS Konum Takibi",
+            "WhatsApp Acil Bildirim",
+            "Web Paneli",
+            "Durum Makinesi",
+            "ESP32 Tabanlı"
+        ],
+        "featuresEn": [
+            "HX711 Load Sensor",
+            "GPS Location Tracking",
+            "WhatsApp Emergency Alert",
+            "Web Panel",
+            "State Machine",
+            "ESP32 Based"
+        ],
+        "githubUrl": "https://github.com/qpvale34/gocuk_bildirimi",
+        "teamTr": "Bireysel",
+        "teamEn": "Individual",
+        "roleTr": "Geliştirici",
+        "roleEn": "Developer",
+        "displayOrder": 3
     }
 ]
