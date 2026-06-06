@@ -2,8 +2,8 @@ export default function ProjectHeader({ project, statusTexts, statusBadgeClass, 
   const isGame = project.category === "Oyun Geliştirme" || project.category === "Game Development";
   const gameSubtitle = isGame
     ? language === "TR"
-      ? "🎮 Arapça kelime eğitimi oyunu - Akıllı tahta uyumlu"
-      : "🎮 Arabic word education game - Smart board compatible"
+      ? "🎮 Arapça harf avı"
+      : "🎮 Arabic letter hunt"
     : null;
 
   return (
