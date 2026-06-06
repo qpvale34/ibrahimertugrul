@@ -66,6 +66,39 @@
         "displayOrder": 3
     },
     {
+        "id": "4",
+        "category": "Oyun Geliştirme",
+        "titleTr": "Arabic Hunt 3D",
+        "titleEn": "Arabic Hunt 3D",
+        "descriptionTr": "Arapça kelime avı temalı 3D oyun. Arapça kelimeleri keşfetme ve öğrenme odaklı interaktif 3D deneyim.",
+        "descriptionEn": "Arabic word hunt themed 3D game. Interactive 3D experience focused on discovering and learning Arabic words.",
+        "status": "completed",
+        "technologies": [
+            "SiUnity",
+            "FaCsharp",
+            "FaGamepad"
+        ],
+        "featuresTr": [
+            "3D Oyun Mekaniği",
+            "Arapça Kelime Avı",
+            "Akıllı Tahta Uyumlu",
+            "WebGL Desteği"
+        ],
+        "featuresEn": [
+            "3D Game Mechanics",
+            "Arabic Word Hunt",
+            "Smart Board Compatible",
+            "WebGL Support"
+        ],
+        "liveUrl": "https://qpvale34.github.io/arabic-hunt-3d/",
+        "githubUrl": "https://github.com/qpvale34/arabic-hunt-3d",
+        "teamTr": "Bireysel",
+        "teamEn": "Individual",
+        "roleTr": "Geliştirici",
+        "roleEn": "Developer",
+        "displayOrder": 4
+    },
+    {
         "id": "2",
         "category": "Gömülü Sistemler",
         "titleTr": "Danışmanlık - Mentörlük",
