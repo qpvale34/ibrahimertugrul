@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useMemo } from "react";
-import { FaProjectDiagram, FaLayerGroup, FaGlobe, FaBolt, FaMicrochip } from "react-icons/fa";
+import { FaProjectDiagram, FaLayerGroup, FaGlobe, FaBolt, FaMicrochip, FaGamepad } from "react-icons/fa";
 import { useLanguage } from "../../context/LanguageContext";
 import { useData } from "../../context/DataContext";
 import CategoryButton from "../../../components/extra/CategoryButton";
@@ -25,12 +25,14 @@ export default function ProjectsPage() {
   const categories = useMemo(() => {
     const categoryIcons = {
       Web: FaGlobe,
-      "Gömülü Sistemler": FaMicrochip
+      "Gömülü Sistemler": FaMicrochip,
+      "Oyun Geliştirme": FaGamepad
     };
 
     const categoryColors = {
       Web: "text-[var(--bg-accent)]",
-      "Gömülü Sistemler": "text-[var(--bg-accent)]"
+      "Gömülü Sistemler": "text-[var(--bg-accent)]",
+      "Oyun Geliştirme": "text-[var(--bg-accent)]"
     };
 
     return {
@@ -43,6 +45,11 @@ export default function ProjectsPage() {
         icon: categoryIcons["Gömülü Sistemler"],
         color: categoryColors["Gömülü Sistemler"],
         title: language === "TR" ? "Gömülü Sistemler" : "Embedded Systems",
+      },
+      "Oyun Geliştirme": {
+        icon: categoryIcons["Oyun Geliştirme"],
+        color: categoryColors["Oyun Geliştirme"],
+        title: language === "TR" ? "Oyun Geliştirme" : "Game Development",
       },
     };
   }, [language]);
