@@ -79,5 +79,25 @@
         "icon": "SiTailwindcss",
         "color": "text-cyan-500",
         "displayOrder": 8
+    },
+    {
+        "categories": [
+            "oyun geliştirme"
+        ],
+        "name": "Unity",
+        "experience": 3,
+        "icon": "SiUnity",
+        "color": "text-gray-300",
+        "displayOrder": 9
+    },
+    {
+        "categories": [
+            "oyun geliştirme"
+        ],
+        "name": "C#",
+        "experience": 3,
+        "icon": "FaCsharp",
+        "color": "text-purple-500",
+        "displayOrder": 10
     }
 ]

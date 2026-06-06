@@ -29,6 +29,43 @@
         "displayOrder": 1
     },
     {
+        "id": "3",
+        "category": "Oyun Geliştirme",
+        "titleTr": "Arabic Word Quiz - Arapça Zamirler Oyunu",
+        "titleEn": "Arabic Word Quiz Game",
+        "descriptionTr": "Akıllı tahtalarda 2 kişilik Arapça kelime yarışması oyunu. Muttasıl ve munfasıl zamirler, harfler ve genel kültür soruları içeren eğitici oyun.",
+        "descriptionEn": "Two-player Arabic word quiz game for smart boards. Educational game containing muttasıl/munfasıl pronouns, letters, and general knowledge questions.",
+        "status": "completed",
+        "technologies": [
+            "SiUnity",
+            "FaCsharp",
+            "FaGamepad"
+        ],
+        "featuresTr": [
+            "2 Oyuncu Yerel Çoklu Oynanış",
+            "Muttasıl ve Munfasıl Zamirler",
+            "Messi ve Ronaldo Animasyonları",
+            "Kalp Sistemi ve Süre Sınırı",
+            "Akıllı Tahta Uyumlu",
+            "WebGL ve Windows Desteği"
+        ],
+        "featuresEn": [
+            "2 Player Local Multiplayer",
+            "Muttasıl and Munfasıl Pronouns",
+            "Messi and Ronaldo Animations",
+            "Heart System and Time Limit",
+            "Smart Board Compatible",
+            "WebGL and Windows Support"
+        ],
+        "liveUrl": "https://qpvale34.github.io/arapcazamirler/",
+        "githubUrl": "https://github.com/qpvale34/arabicwordquiz",
+        "teamTr": "Bireysel",
+        "teamEn": "Individual",
+        "roleTr": "Geliştirici",
+        "roleEn": "Developer",
+        "displayOrder": 3
+    },
+    {
         "id": "2",
         "category": "Gömülü Sistemler",
         "titleTr": "Danışmanlık - Mentörlük",
