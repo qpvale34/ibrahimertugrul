@@ -120,10 +120,11 @@ export default function ProjectCard({ project, translations, language, index }) 
     <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-6 xl:space-x-8">
      <div className="flex-1 mb-2 sm:mb-6 lg:mb-0">
       <ProjectHeader
-       project={project}
-       statusTexts={statusTexts}
-       statusBadgeClass={statusBadgeClass}
-      />
+        project={project}
+        statusTexts={statusTexts}
+        statusBadgeClass={statusBadgeClass}
+        language={language}
+       />
 
       <ProjectTechnologies technologyIcons={technologyIcons} />
 
