@@ -1,4 +1,4 @@
 :HL["/ibrahimertugrul/_next/static/chunks/385-86es709i9.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"ARJ_WEABEBFqTXXzsMRQl","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"Ot9JypmurDt0NsifBJRh3","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
