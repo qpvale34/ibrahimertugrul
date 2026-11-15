@@ -31,10 +31,10 @@
     {
         "id": "6",
         "category": "Web",
-        "titleTr": "Miftâhu'l-Eşyâ — İnteraktif Arapça Öğrenme İstasyonu & 3D Baskı Stüdyosu",
-        "titleEn": "Miftahu'l-Esya — Interactive Arabic Learning Station & 3D Print Studio",
-        "descriptionTr": "Çocuklar için RFID/NFC tabanlı, oyunlaştırılmış Arapça kelime öğretim cihazının tarayıcı içi interaktif simülatörü ve 1:1 mm gerçek boyutlu STL/SCAD 3D baskı tasarım stüdyosu.",
-        "descriptionEn": "Browser-based interactive simulator and 1:1 mm real-scale STL/SCAD 3D print design studio for a kid-friendly RFID/NFC gamified Arabic vocabulary learning station.",
+        "titleTr": "Miftâhu'l-Eşyâ — İnteraktif Arapça AI Keşif İstasyonu & 3D Baskı Stüdyosu",
+        "titleEn": "Miftahu'l-Esya — Interactive Arabic AI Discovery Station & 3D Print Studio",
+        "descriptionTr": "Çocuklar için ESP32-S3 + OV2640 kamera tabanlı yapay zekâ nesne tanıma cihazının tarayıcı içi interaktif simülatörü ve 1:1 mm gerçek boyutlu STL/SCAD 3D baskı tasarım stüdyosu.",
+        "descriptionEn": "Browser-based interactive simulator and 1:1 mm real-scale STL/SCAD 3D print design studio for a kid-friendly ESP32-S3 + OV2640 AI object-recognition Arabic learning device.",
         "status": "completed",
         "technologies": [
             "FaHtml5",
@@ -44,18 +44,18 @@
             "FaTools"
         ],
         "featuresTr": [
-            "3 Oyun Modu (Serbest Keşif, Quiz & Süreli Yarış) ve XP / Seri Sistemi",
+            "3 Oyun Modu (Keşif Modu, Kelime Avı & Hece/Kök) ve XP / Seri / Rozet Sistemi",
             "Web Audio Ses Efektleri + Tarayıcı Arapça Telaffuz (SpeechSynthesis)",
-            "1:1 mm Gerçek Boyutlu 3D Kasa, 6 Eşya Modeli ve Patlatılmış Görünüm",
+            "1:1 mm Gerçek Boyutlu 3D Kasa (86×146×42 mm), 6 Eşya Modeli ve Patlatılmış Görünüm",
             "Doğrudan İndirilebilir 1:1 mm .STL ve OpenSCAD (.SCAD) 3D Baskı Dosyaları",
-            "ESP32 + RC522 RFID + 2.4\" ILI9341 TFT + 4 Arcade Buton Mimarisi"
+            "Deneyap Kart 1A v2 (ESP32-S3) + OV2640 Kamera + 2.4\" ILI9341 TFT + 4 Buton"
         ],
         "featuresEn": [
-            "3 Game Modes (Free Explore, Quiz & Timed Rush) with XP & Streak System",
+            "3 Game Modes (Explore, Word Hunt Quiz & Syllable/Root) with XP & Streak",
             "Web Audio Sound Effects + Browser Arabic Pronunciation (SpeechSynthesis)",
-            "1:1 mm Real-Scale 3D Case, 6 Object Models & Exploded View",
+            "1:1 mm Real-Scale 3D Case (86×146×42 mm), 6 Object Models & Exploded View",
             "Direct Downloadable 1:1 mm .STL and OpenSCAD (.SCAD) 3D Print Files",
-            "ESP32 + RC522 RFID + 2.4\" ILI9341 TFT + 4 Arcade Button Architecture"
+            "Deneyap Kart 1A v2 (ESP32-S3) + OV2640 Camera + 2.4\" ILI9341 TFT + 4 Buttons"
         ],
         "liveUrl": "https://qpvale34.github.io/miftahul-esya/",
         "githubUrl": "https://github.com/qpvale34/miftahul-esya",
