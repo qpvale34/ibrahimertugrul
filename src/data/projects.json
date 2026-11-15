@@ -29,6 +29,43 @@
         "displayOrder": 1
     },
     {
+        "id": "6",
+        "category": "Web",
+        "titleTr": "Miftâhu'l-Eşyâ — İnteraktif Arapça Öğrenme İstasyonu & 3D Baskı Stüdyosu",
+        "titleEn": "Miftahu'l-Esya — Interactive Arabic Learning Station & 3D Print Studio",
+        "descriptionTr": "Çocuklar için RFID/NFC tabanlı, oyunlaştırılmış Arapça kelime öğretim cihazının tarayıcı içi interaktif simülatörü ve 1:1 mm gerçek boyutlu STL/SCAD 3D baskı tasarım stüdyosu.",
+        "descriptionEn": "Browser-based interactive simulator and 1:1 mm real-scale STL/SCAD 3D print design studio for a kid-friendly RFID/NFC gamified Arabic vocabulary learning station.",
+        "status": "completed",
+        "technologies": [
+            "FaHtml5",
+            "FaJsSquare",
+            "FaMicrochip",
+            "SiArduino",
+            "FaTools"
+        ],
+        "featuresTr": [
+            "3 Oyun Modu (Serbest Keşif, Quiz & Süreli Yarış) ve XP / Seri Sistemi",
+            "Web Audio Ses Efektleri + Tarayıcı Arapça Telaffuz (SpeechSynthesis)",
+            "1:1 mm Gerçek Boyutlu 3D Kasa, 6 Eşya Modeli ve Patlatılmış Görünüm",
+            "Doğrudan İndirilebilir 1:1 mm .STL ve OpenSCAD (.SCAD) 3D Baskı Dosyaları",
+            "ESP32 + RC522 RFID + 2.4\" ILI9341 TFT + 4 Arcade Buton Mimarisi"
+        ],
+        "featuresEn": [
+            "3 Game Modes (Free Explore, Quiz & Timed Rush) with XP & Streak System",
+            "Web Audio Sound Effects + Browser Arabic Pronunciation (SpeechSynthesis)",
+            "1:1 mm Real-Scale 3D Case, 6 Object Models & Exploded View",
+            "Direct Downloadable 1:1 mm .STL and OpenSCAD (.SCAD) 3D Print Files",
+            "ESP32 + RC522 RFID + 2.4\" ILI9341 TFT + 4 Arcade Button Architecture"
+        ],
+        "liveUrl": "https://qpvale34.github.io/miftahul-esya/",
+        "githubUrl": "https://github.com/qpvale34/miftahul-esya",
+        "teamTr": "Bireysel",
+        "teamEn": "Individual",
+        "roleTr": "Tasarımcı & Geliştirici",
+        "roleEn": "Designer & Developer",
+        "displayOrder": 2
+    },
+    {
         "id": "3",
         "category": "Oyun Geliştirme",
         "titleTr": "Arabic Word Quiz - Arapça Zamirler Oyunu",
